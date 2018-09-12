@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/GoodGirl312/springcloud/
+          search-paths: respo2
+          username:
+          password:
+  application:
+    name: config-server
+server:
+  port: 8869
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8891/eureka
+
